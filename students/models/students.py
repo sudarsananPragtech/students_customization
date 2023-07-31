@@ -1,10 +1,10 @@
 from odoo import models, fields, api
 
-class Student(models.Model):
-    _name = 'custom.student'
-    _description = 'Student'
+class CustomStudent(models.Model):
+    _name = 'custom.students'
+    _description = 'Students'
 
     
     name = fields.Char(string='Name')
-    age = fields.Integer(compute="compute_age",store=True)
+    age = fields.Integer()
     class_name = fields.Char()

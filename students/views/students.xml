@@ -1,8 +1,8 @@
 <odoo>
     <data>
-            <record id="student_tree" model="ir.ui.view">
-              <field name="name">custom.studnet.tree</field>
-              <field name="model">custom.studnet</field>
+            <record id="custom_student_tree" model="ir.ui.view">
+              <field name="name">custom.students.tree</field>
+              <field name="model">custom.students</field>
               <field name="arch" type="xml">
                   <tree string="student">
                       <field name="name" /> 
@@ -11,9 +11,9 @@
                   </tree>
               </field>
           </record>
-          <record id="student_form" model="ir.ui.view">
-              <field name="name">custom.studnet.form</field>
-              <field name="model">custom.studnet</field>
+          <record id="custom_student_form" model="ir.ui.view">
+              <field name="name">custom.students.form</field>
+              <field name="model">custom.students</field>
               <field name="arch" type="xml">
                   <form string="student">
                       <sheet>
@@ -28,9 +28,9 @@
                   </form>
               </field>
           </record>
-          <record id="student_action" model="ir.actions.act_window">
+          <record id="custom_student_action" model="ir.actions.act_window">
               <field name="name">student</field>
-              <field name="res_model">customcustom.studnet</field>
+              <field name="res_model">custom.students</field>
               <field name="view_mode">tree,form</field>
               <field name="help" type="html">
                   <p studnet="o_view_nocontent_smiling_face">
@@ -38,6 +38,7 @@
                   </p>
               </field>
           </record>
-          <menuitem id="student_menu_root" name="student" action="students_customization.student_action" parent="student.school_menu_root" sequence="4"/>
+          <menuitem id="main_menu" name="Custom" sequence="1" />
+          <menuitem id="custom_student_menu_root" name="student" action="students.custom_student_action" parent="students.main_menu" sequence="1"/>
     </data>
   </odoo>
