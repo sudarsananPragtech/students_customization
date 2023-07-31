@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+            <record id="student_tree" model="ir.ui.view">
+              <field name="name">custom.studnet.tree</field>
+              <field name="model">custom.studnet</field>
+              <field name="arch" type="xml">
+                  <tree string="student">
+                      <field name="name" /> 
+                      <field name="age" />
+                      <field name="class_name" />
+                  </tree>
+              </field>
+          </record>
+          <record id="student_form" model="ir.ui.view">
+              <field name="name">custom.studnet.form</field>
+              <field name="model">custom.studnet</field>
+              <field name="arch" type="xml">
+                  <form string="student">
+                      <sheet>
+                          <group>
+                              <group>
+                                <field name="name" /> 
+                                <field name="age" />
+                                <field name="class_name" />
+                              </group>
+                          </group>
+                      </sheet>
+                  </form>
+              </field>
+          </record>
+          <record id="student_action" model="ir.actions.act_window">
+              <field name="name">student</field>
+              <field name="res_model">customcustom.studnet</field>
+              <field name="view_mode">tree,form</field>
+              <field name="help" type="html">
+                  <p studnet="o_view_nocontent_smiling_face">
+                      Create a studnet
+                  </p>
+              </field>
+          </record>
+          <menuitem id="student_menu_root" name="student" action="students_customization.student_action" parent="student.school_menu_root" sequence="4"/>
+    </data>
+  </odoo>
