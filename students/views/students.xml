@@ -1,7 +1,7 @@
 <odoo>
     <data>
             <record id="custom_student_tree" model="ir.ui.view">
-              <field name="name">custom.students.tree</field>
+              <field name="name">custom.students</field>
               <field name="model">custom.students</field>
               <field name="arch" type="xml">
                   <tree string="Student">
