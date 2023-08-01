@@ -4,7 +4,7 @@
               <field name="name">custom.students.tree</field>
               <field name="model">custom.students</field>
               <field name="arch" type="xml">
-                  <tree string="student">
+                  <tree string="Student">
                       <field name="name" /> 
                       <field name="age" />
                       <field name="class_name" />
@@ -15,7 +15,7 @@
               <field name="name">custom.students.form</field>
               <field name="model">custom.students</field>
               <field name="arch" type="xml">
-                  <form string="student">
+                  <form string="Student">
                       <sheet>
                           <group>
                               <group>
@@ -29,16 +29,16 @@
               </field>
           </record>
           <record id="custom_student_action" model="ir.actions.act_window">
-              <field name="name">student</field>
+              <field name="name">Student</field>
               <field name="res_model">custom.students</field>
               <field name="view_mode">tree,form</field>
               <field name="help" type="html">
                   <p studnet="o_view_nocontent_smiling_face">
-                      Create a studnet
+                      Create a Student
                   </p>
               </field>
           </record>
           <menuitem id="main_menu" name="Custom" sequence="1" />
-          <menuitem id="custom_student_menu_root" name="student" action="students.custom_student_action" parent="students.main_menu" sequence="1"/>
+          <menuitem id="custom_student_menu_root" name="Student" action="students.custom_student_action" parent="students.main_menu" sequence="1"/>
     </data>
   </odoo>
