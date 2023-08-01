@@ -6,6 +6,7 @@
               <field name="arch" type="xml">
                   <tree string="Student">
                       <field name="name" /> 
+                      <field name="date_of_birth" />
                       <field name="age" />
                       <field name="class_name" />
                   </tree>
@@ -15,11 +16,12 @@
               <field name="name">custom.students.form</field>
               <field name="model">custom.students</field>
               <field name="arch" type="xml">
-                  <form string="Student"> 
+                  <form string="Student">
                       <sheet>
                           <group>
                               <group>
-                                <field name="name" /> 
+                                <field name="name" />
+                                <field name="date_of_birth" />
                                 <field name="age" />
                                 <field name="class_name" />
                               </group>
