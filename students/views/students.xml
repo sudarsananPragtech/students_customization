@@ -15,7 +15,7 @@
               <field name="name">custom.students.form</field>
               <field name="model">custom.students</field>
               <field name="arch" type="xml">
-                  <form string="Student">
+                  <form string="Student"> 
                       <sheet>
                           <group>
                               <group>
