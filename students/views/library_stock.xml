@@ -1,0 +1,117 @@
+<odoo>
+    <data>
+        <record id="custom_lilbrary_action_stock" model="ir.actions.act_window">
+            <field name="name">Stock</field>
+            <field name="res_model">custom_library.stock</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Create a book </p>
+            </field>
+        </record>
+
+        <!-- </%%%%%%%%%%%%%%%%%%%%%%%%%/KANBAN VIEW/%%%%%%%%%%%%%%%%%%%%%%%%%/> -->
+
+        <record id="stock_kanban_view" model="ir.ui.view">
+            <field name="name">custom_library.stock.kanban</field>
+            <field name="model">custom_library.stock</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_stock">
+                    <field name="id" />
+                    <field name="book_id" />
+                    <field name="author_name" />
+                    <field name="current_stock" />
+                    <field name="book_rate" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click" style="width:500px;">
+                                <div class="o_kanban_image">
+                                    <img type="open"
+                                        t-att-src="kanban_image('custom_library.stock', 'image', record.id.raw_value)"
+                                        alt="book_id" />
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <div class="col-6">
+                                        <strong class="oe_kanban_record_title">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <span>Book Name:
+                                                        <t t-esc="record.book_id.value"/>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 text-muted">
+                                                    <span>Author :
+                                                        <t t-esc="record.author_name.value"/>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 text-muted">
+                                                    <span>On Hand :
+                                                        <t t-esc="record.current_stock.value"/>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span>Rate :
+                                            <field name="book_rate" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- <***************FORM VIEW*****************> -->
+
+        <record id="custom_stock_form_view" model="ir.ui.view">
+            <field name="name">custom_library.stock.form</field>
+            <field name="model">custom_library.stock</field>
+            <field name="arch" type="xml">
+                <form string="Stock">
+                    <sheet>
+                        <group>
+                            <div style="width:100px; float:right">
+                                <field name="image" widget="image" class="oe_avathar" />
+                            </div>
+                            <group>
+                                <field name="book_id" />
+                                <field name="author_name" />
+                                <field name="current_stock" />
+                                <field name="book_rate" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- <***************TREE VIEW*****************> -->
+
+        <record id="custom_stock_tree_view" model="ir.ui.view">
+            <field name="name">custom_library.stock.tree</field>
+            <field name="model">custom_library.stock</field>
+            <field name="arch" type="xml">
+                <tree string="Stock">
+                    <field name="book_id" />
+                    <field name="author_name" />
+                    <field name="current_stock" />
+                    <field name="book_rate" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem name="Stock"
+            id="custom_stock_menu_list"
+            action="students.custom_lilbrary_action_stock"
+            parent="students.custom_inventory_menu_list"
+            sequence="3" />
+
+    </data>
+</odoo>

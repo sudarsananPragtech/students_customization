@@ -1,0 +1,70 @@
+<odoo>
+    <data>
+        <record id="custom_lilbrary_action_books" model="ir.actions.act_window">
+            <field name="name">Books</field>
+            <field name="res_model">custom_library.books</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Create a book </p>
+            </field>
+        </record>
+
+        <!-- <***************FORM VIEW*****************> -->
+
+        <record id="custom_books_form_view" model="ir.ui.view">
+            <field name="name">custom_library.books.form</field>
+            <field name="model">custom_library.books</field>
+            <field name="arch" type="xml">
+                <form string="Books">
+                <header>
+                    <field name="status" widget="statusbar" />
+                </header>
+                    <sheet>
+                        <widget name="web_ribbon" title="Available" bg_color="bg-success"
+                            attrs="{'invisible': [('status','!=', 'available')]}" />
+                        <widget name="web_ribbon" title="Reserved" bg_color="bg-warning"
+                            attrs="{'invisible': [('status','!=', 'reserved')]}" />
+                        <group>
+                            <div style="width:100px; float:right">
+								<field name="image" widget="image" class="oe_avathar" />
+							</div>
+                            <group>
+                                <field name="ISBN" />
+                                <field name="name" />
+                                <field name="genere" />
+                                <field name="author_id" />
+                                <field name="current_stock" />
+                                <field name="publication_date" />
+                                <field name="rate" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- <***************TREE VIEW*****************> -->
+
+        <record id="custom_books_tree_view" model="ir.ui.view">
+            <field name="name">custom_library.books.tree</field>
+            <field name="model">custom_library.books</field>
+            <field name="arch" type="xml">
+                <tree string="Books">
+                    <field name="ISBN" />
+                    <field name="name" />
+                    <field name="genere" />
+                    <field name="author_id" />
+                    <field name="status" />
+                    <field name="rate" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem name="Books" 
+                id="custom_books_menu_list"
+                action="students.custom_lilbrary_action_books"
+                parent="students.main_menu"
+                sequence="2" />
+
+    </data>
+</odoo>

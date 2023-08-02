@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+        <record id="custom_lilbrary_action_inventory" model="ir.actions.act_window">
+            <field name="name">Inventory</field>
+            <field name="res_model">custom_library.inventory</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Create a book </p>
+            </field>
+        </record>
+
+        <!-- <***************FORM VIEW*****************> -->
+
+        <record id="custom_inventory_form_view" model="ir.ui.view">
+            <field name="name">custom_library.inventory.form</field>
+            <field name="model">custom_library.inventory</field>
+            <field name="arch" type="xml">
+                <form string="Inventory">
+                    <sheet>
+						<group>
+						<h1 style="color:#579184">
+							<field name="date"/>
+						</h1>
+						</group>
+						<notebook>
+							<pages string="Purchase" name="purchase">
+								<field name="book_ids">
+                                    <tree editable="bottom">
+                                        <field name="book_id" />
+                                        <field name="author" />
+                                        <field name="purchased_count" />
+                                    </tree>
+                                </field>
+							</pages>
+						</notebook>
+					</sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- <***************TREE VIEW*****************> -->
+
+        <record id="custom_inventory_tree_view" model="ir.ui.view">
+            <field name="name">custom_library.inventory.tree</field>
+            <field name="model">custom_library.inventory</field>
+            <field name="arch" type="xml">
+                <tree string="Inventory">
+                    <field name="date"/>
+                    <field name="book_ids" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem name="Inventory"
+            id="custom_inventory_menu_list"
+            parent="students.main_menu"
+            sequence="4" />
+
+        <menuitem name="Purchase"
+            id="custom_purchase_menu_list"
+            action="students.custom_lilbrary_action_inventory"
+            parent="students.custom_inventory_menu_list"
+            sequence="2" />
+
+    </data>
+</odoo>

@@ -1,2 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_custom_students,custom.students,model_custom_students,,1,1,1,1
+access_custom_students_books,custom_library.books,model_custom_library_books,,1,1,1,1
+access_custom_students_author,custom_library.author,model_custom_library_author,,1,1,1,1
+access_custom_students_inventory,custom_library.inventory,model_custom_library_inventory,,1,1,1,1
+access_custom_library_inventory_buy,access_custom_library_inventory_buy,model_custom_library_inventory_buy,,1,1,1,1
+access_custom_library_books_sales,access_custom_library_books_sales,model_custom_library_books_sales,,1,1,1,1
+access_custom_library_sales,access_custom_library_sales,model_custom_library_sales,,1,1,1,1
+access_custom_library_stock,access_custom_library_stock,model_custom_library_stock,base.group_user,1,1,1,1

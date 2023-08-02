@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+        <record id="custom_lilbrary_action_sales" model="ir.actions.act_window">
+            <field name="name">Sales</field>
+            <field name="res_model">custom_library.sales</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Create a sales order </p>
+            </field>
+        </record>
+
+        <!-- <***************FORM VIEW*****************> -->
+
+        <record id="custom_sales_form_view" model="ir.ui.view">
+            <field name="name">custom_library.sales.form</field>
+            <field name="model">custom_library.sales</field>
+            <field name="arch" type="xml">
+                <form string="Sales">
+                    <sheet>
+                        <group>
+                            <field name="purchase_date" />
+                            <field name="returned_date" />
+                        </group>
+                        <notebook>
+                            <pages string="Purchase" name="purchase">
+                                <field name="sales_book_ids">
+                                    <tree editable="bottom">
+                                        <field name="book_id" />
+                                        <field name="author" />
+                                        <field name="rate" />
+                                        <field name="taken_count" />
+                                    </tree>
+                                </field>
+                            </pages>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- <***************TREE VIEW*****************> -->
+
+        <record id="custom_sales_tree_view" model="ir.ui.view">
+            <field name="name">custom_library.sales.tree</field>
+            <field name="model">custom_library.sales</field>
+            <field name="arch" type="xml">
+                <tree string="Sales">
+                    <field name="sales_book_ids" />
+                    <field name="purchase_date" />
+                    <field name="returned_date" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem name="Sales"
+            id="custom_sales_menu_list"
+            action="students.custom_lilbrary_action_sales"
+            parent="students.main_menu"
+            sequence="5" />
+
+    </data>
+</odoo>
