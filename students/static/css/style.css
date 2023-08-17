@@ -1,0 +1,116 @@
+.card {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=996&t=st=1691064186~exp=1691064786~hmac=c0c8120b499c836e697b45f47037ce4f4caa74aa8bf0603be4f71fc0e4aa16b6");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: inherit;
+    max-height: 800px;
+    align-items: center;
+
+}
+.form-header {
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom right, rgb(245, 233, 68), rgb(113, 248, 142),rgb(99, 231, 248));
+    position: inherit;
+    width: 100%;
+    height:60px;   
+    border-radius: 20px;
+}
+.form-group {
+    text-align: center;
+}
+h4{
+    color: #fff;
+    font-weight: 800;
+    text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.75);
+}
+.head-stud {
+    margin-top: 10px;
+    font-size: 35px;
+    font-weight: 600;
+    position: relative;
+    padding: 2px black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+input {
+    margin-top: 20px;
+    background-image: linear-gradient(to right, rgb(32, 32, 148),rgb(104, 245, 233), rgb(31, 31, 153));
+    border-radius: 30px;
+    border-color: rgb(39, 209, 231);
+    text-align: center;
+}
+  
+input::-webkit-input-placeholder {
+color: #ffffff;
+position: relative;
+padding-left: 0;
+-webkit-transition: padding 0.5s;
+/* For Safari 3.1 to 6.0 */
+transition: padding 0.5s;
+}
+  
+/*
+* On hover
+*/
+input:hover::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder {
+padding-right: 400px;
+    }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.my_buttons {
+    width: 300px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+    
+.my_buttons:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: rgb(139, 21, 21);
+}
+
+.my_buttons:focus {
+    outline: none;
+}
+
+.my_buttons.color-1 {
+    background-image: linear-gradient(to right, rgb(202, 100, 243), rgb(106, 106, 247), rgb(38, 248, 248), rgb(126, 241, 19));
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+@media (max-width:530px) {
+    .form-header h3{
+        font-size: 20px;
+    }
+    .form-header{
+        height: 45px;
+    }
+    .input {
+        font-size: 5px;
+    }
+    .my_buttons {
+        width:200px;
+        height: 35px;
+    }
+}

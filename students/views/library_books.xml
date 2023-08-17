@@ -22,7 +22,7 @@
                     <sheet>
                         <widget name="web_ribbon" title="Available" bg_color="bg-success"
                             attrs="{'invisible': [('status','!=', 'available')]}" />
-                        <widget name="web_ribbon" title="Reserved" bg_color="bg-warning"
+                        <widget name="web_ribbon" title="No Stock" bg_color="bg-warning"
                             attrs="{'invisible': [('status','!=', 'reserved')]}" />
                         <group>
                             <div style="width:100px; float:right">

@@ -16,10 +16,18 @@
             <field name="model">custom_library.sales</field>
             <field name="arch" type="xml">
                 <form string="Sales">
+                    <header>
+                        <button class="oe_hilight" name="return" string="Returned" />
+                    </header>
                     <sheet>
                         <group>
-                            <field name="purchase_date" />
-                            <field name="returned_date" />
+                            <group>
+                                <field name="student_id" />
+                                <field name="purchase_date" />
+                            </group>
+                            <group class="float-right">
+                                <field name="returned_date" />
+                            </group>
                         </group>
                         <notebook>
                             <pages string="Purchase" name="purchase">
@@ -27,8 +35,9 @@
                                     <tree editable="bottom">
                                         <field name="book_id" />
                                         <field name="author" />
-                                        <field name="rate" />
                                         <field name="taken_count" />
+                                        <field name="rate" />
+                                        <field name="total" />
                                     </tree>
                                 </field>
                             </pages>

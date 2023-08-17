@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'website'],
 
     # always loaded
     'data': [
@@ -31,8 +31,9 @@
         'views/inventory.xml',
         'views/library_sales.xml',
         'views/library_stock.xml',
-
-
+        'views/web_template.xml',
+        'static/js/my_js.js',
+        'views/new_template.xml',
 
 
     ],
