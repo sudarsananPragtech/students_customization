@@ -1,3 +1,4 @@
+
 function new_func() {
 
 //     console.log('hello world.....!!!');
@@ -650,11 +651,520 @@ function new_func() {
 //     num++;
 // }
 
-const add = (num1,num2) => {
-    sum = num1 + num2
-    return sum
-}
-console.log(add(10,22))
+// const add = (num1,num2) => {
+//     sum = num1 + num2
+//     return sum
+// }
+// console.log(add(10,22))
+
+// DATE 18/08/2023
+
+// 1
+// function printNumber(num) {
+//     if (num <=10) {
+//         console.log(num)
+//         num++
+//         printNumber(num)
+//     }
+// }
+// printNumber(1)
+
+// 2
+// function printNumber(num) {
+//     if (num >0) {
+//         console.log(num)
+//         num--
+//         printNumber(num)
+//     }
+//     else console.log('Finished')
+// }
+// printNumber(10)
+
+// 3
+// function printNumber(num) {
+//     if (num ===5) {
+//         console.log(`The number ${num} is identified`)
+//     } else if (num<6) {
+//         console.log(`The number ${num} is not valid`)
+//         num++
+//         printNumber(num)
+//     }
+// }
+// printNumber(1)
+
+// 4
+// function AddNumber(num1, num2) {
+//     if (num1 <= 0) {
+//         console.log("Number could not be '0' or less than '0' ")
+//     }else if ( num2 <= 0) {
+//         console.log("Number could not be '0' or less than '0' ")
+//     }
+//     else  {sum = num1 + num2
+//     console.log(`The sum of the numbers is ${sum}`)
+// }
+// }
+// AddNumber(0,36)
+
+// 5
+// function EvenNumber(num1) {
+//     if (num1 %2 === 0) {
+//         console.log("Number is even")
+//     }
+//     else console.log(`Number is odd`)
+// }
+// EvenNumber(33)
+
+// 6
+// function compareValues(value1, value2) {
+//     if (value1 === undefined || value2 === undefined) {
+//         return 'undefined'
+//     }
+//     else if (isNaN(value1) || isNaN(value2)) {
+//         return 'Not a number';
+//     }
+//     else if (value1 === null || value2 === null){
+//         return 'NUll value'
+//     }
+//     if (value1 === value2) {
+//         return 'Equels';
+//     }
+//     else {
+//         return 'Not Equal';
+//     }
+// }
+// var a;
+// console.log(compareValues(1,2));
+// console.log(compareValues(a,2));
+// console.log(compareValues("a",2));
+// console.log(compareValues(null,9));
+// console.log(compareValues(2,2));
+
+// 7
+// function isPrimeNumber(n) {
+//     for (var i = 2; i < n; i++) { 
+//       if(n % i === 0) return false; 
+//         }
+//     return n > 1; 
+//   }
+//   console.log(isPrimeNumber(1));
+//   console.log(isPrimeNumber(2));
+//   console.log(isPrimeNumber(9));
+//   console.log(isPrimeNumber(11));
+//   console.log(isPrimeNumber(131));
+
+// 8
+// function IsNumber(num) {
+//     if (Number(num)===num) {
+//         console.log("It is an integer")
+//     }
+//     else console.log("It is not an integer")
+// }
+// IsNumber(2)
+
+// 9
+// for ( var i = 1; i <= 100; i++ )
+// {
+//   if ( i%3 === 0 && i%5 === 0 )
+//   {
+//     console.log( i + " FizzBuzz" );
+//   }
+//   else if ( i%3 === 0 ) 
+//   {
+//     console.log(i+ " Fizz" );
+//   }
+//   else if ( i%5 === 0 ) 
+//   {
+//     console.log(i+ " Buzz" );
+//   }
+//   else
+//   {
+//     console.log(i);
+//   }
+// }
+
+// 10
+// function IsPassed() {
+//     var students = [
+//         {name : 'Sudarsanan', marks :95},
+//         {name : 'Anandhu', marks : 90},
+//         {name : 'Razeen', marks : 55},
+//         {name : 'Sreekuttan', marks : 86},
+//         {name : 'Athunya', marks : 20}
+//     ]
+//     for (let i = 0; i<students.length; i++) {
+//         if (students[i].marks>=90) {
+//             console.log(`Hello ${students[i].name} You got ${students[i].marks} and it is Excellent`)
+//         }
+//         else if (students[i].marks>=70 && students[i].marks<90 ) {
+//             console.log(`Hello ${students[i].name} You got ${students[i].marks} and it is Good`)
+//         }
+//         else if (students[i].marks>=50 && students[i].marks<70) {
+//             console.log(`Hello ${students[i].name} You got ${students[i].marks} and you can improve`)
+//         }
+//         else console.log(`Hello ${students[i].name} You got ${students[i].marks} and You are failed`)
+//     }
+// }
+// IsPassed()
+
+// SWITCH STATEMENTS
+
+// 1
+// switch (new Date().getDay()) {
+//     case 0:
+//       day = "Sunday";
+//       break;
+//     case 1:
+//       day = "Monday";
+//       break;
+//     case 2:
+//        day = "Tuesday";
+//       break;
+//     case 3:
+//       day = "Wednesday";
+//       break;
+//     case 4:
+//       day = "Thursday";
+//       break;
+//     case 5:
+//       day = "Friday";
+//       break;
+//     case 6:
+//       day = "Saturday";
+//   }
+//   console.log(day)
+
+// 2
+// fruits = 'Apple'
+// switch(fruits) {
+//     case "Banana":
+//     case 'Apple' :
+//     case 'Orange' :
+//         console.log('It is a fruit')
+//       break;
+//     case "Brinjal":
+//         console.log("It is a vegetable")
+//       break;
+//   }
+
+// 3
+// let result;
+// const operator = '/'
+// const number1 = 15
+// const number2 = 5
+// switch(operator) {
+//     case '+':
+//         result = number1 + number2;
+//         console.log(`${number1} + ${number2} = ${result}`);
+//         break;
+//     case '-':
+//         result = number1 - number2;
+//         console.log(`${number1} - ${number2} = ${result}`);
+//         break;
+//     case '*':
+//         result = number1 * number2;
+//         console.log(`${number1} * ${number2} = ${result}`);
+//         break;
+//     case '/':
+//         result = number1 / number2;
+//         console.log(`${number1} / ${number2} = ${result}`);
+//         break;
+//     default:
+//         console.log('Invalid operator');
+//         break;
+// }
+
+// 4
+// var message = "hi";
+// switch (message) {
+//   case "hello": {
+//     const message = "hello, welcome!";
+//     console.log(message);
+//     break;
+//   }
+//   case "hi": {
+//     const message = "hi, how are you?";
+//     console.log(message);
+//     break;
+//   }
+//   default: {
+//     console.log("invalid message received.");
+//   }
+// }
+
+// 5
+// const sides = 4
+// switch (sides) {
+//     case 3:{
+//       console.log("This shape is a Triangle");
+//       break;
+//     }
+//     case 4:{
+//       console.log("This shape is a rectangle.");
+//       break;
+//     }
+//     case 5:{
+//       console.log("This shape is a Pentagon.");
+//       break;
+//     }
+//   }
+
+// EXCEPTION
+
+// 1
+
+// function ExceptionFunction() {
+//   const x = 2
+//   try {
+//     decodeURI("%%%")
+
+//     x.toUppercase()
+
+//     if (x.toPrecision(500)){
+//       throw err
+//     }
+
+//     if (x = y + 1){
+//       throw err
+//     }
+//     if(x === "") throw "is empty";
+//     if(x<18) throw "You are not eligible for License";
+//     if(x >=18 && x< 60) throw "Yes you are eligible for Licence test";
+//     if(x >=60) throw "Sorry You are age over";
+//   }
+//   catch(err) {
+//     console.log("Error: " + err + ".")
+//   }
+//   finally {
+//     console.log(x)
+//   }
+// }
+// ExceptionFunction()
+
+
+// function gradeValidation() {
+//     let grade = 3
+//     try {
+//       if (grade === "") {
+//         throw "Input is empty";
+//       }
+
+//       decodeURI("%%%")
+
+//       grade.toUppercase()
+
+//       if (grade.toPrecision(500)){
+//         throw err
+//       }
+
+//       if (grade = y + 1){
+//         throw err
+//       }
+//       if (grade[2]=== 0) {
+//         throw 'Index out of range'
+//       }
+  
+//       if (grade > 50) {
+//         throw "You have passed the Xm";
+//       }
+
+//       if (grade < 50) {
+//         throw "You have failed the Xm";
+//       }
+      
+//     }
+//     catch (error) {
+//       console.log("Error:" + error);
+//     }
+//     finally{
+//         console.log(grade)
+//     }
+// }
+  
+// gradeValidation()
+
+
+// ////////////////22/08/2023///////////////////////////
+////////////////////IMPLICIT////////////////////////////
+
+// 1
+// const mainObject = {
+//   name : 'Sudarsanan',
+//   lastName : 'P.R',
+//   proffession : 'Software Developer',
+//   place : 'Thrissur',
+//   welcome : function() {
+//     console.log(`Welcome ${this.name} ${this.lastName} from ${this.place} To Pragmetic Techsoft as a ${this.proffession}`)
+//   }
+// }
+// mainObject.welcome()
+
+// 2
+
+// function greeting(obj) {
+//   obj.Message = function() {
+//     console.log(`${this.name} is ${this.age} years old!`);
+//   }
+// };
+
+// const tom = {
+//   name: 'Tom',
+//   age: 7
+// };
+
+// const jerry = {
+//   name: 'jerry',
+//   age: 3
+// };
+
+// greeting(tom);
+// greeting(jerry);
+
+// tom.Message();
+// jerry.Message();
+
+
+// 3
+// function greeting(obj) {
+//   obj.Message = function() {
+//     console.log(`Hi ${this.name} You are ${this.age} years old!`);
+//   }
+// };
+// const details = {
+//   name: 'Anandhu',
+//   age: 27
+//   };
+// greeting(details);
+// details.Message()
+
+// 4
+// const details = {
+//   name: 'Anandhu',
+//   age: 27,
+//   greeting : function(obj) {
+//     obj.Message = function() {
+//       console.log(`Hi ${this.name} You are ${this.age} years old!`);
+//     }
+//   }
+//   };
+//   const param = {
+//     name: 'Sudarsanan',
+//   age: 27
+//   }
+// details.greeting(param);
+// param.Message()
+
+// 5
+// const details = {
+//   name: 'Anandhu',
+//   age: 27,
+//   greeting : function(obj) {
+//     console.log(`Hi ${this.name} You are ${this.age} years old!`);
+//     obj.Message = function() {
+//       console.log(`Hi ${this.name} You are ${this.age} years old!`);
+//     }
+//   }
+//   };
+//   const param = {
+//     name: 'Sudarsanan',
+//   age: 27
+//   }
+// details.greeting(param);
+// param.Message()
+
+//////////////////////////////IMPLICIT//////////////////////////////////
+
+// 1
+// const getName = function() {
+//   console.log(`hello ${this.name} from ${this.address}`);
+// }
+// let user = {
+// name: 'Sangadan',
+// address: 'Paralokam'  
+// };
+
+// getName.call(user);
+
+// 2
+// const getName = function() {
+//   console.log(`hello ${this.name} from ${this.address}`);
+// }
+// let user = {
+// name: 'Sangadan',
+// address: 'Paralokam'  
+// };
+// getName.call(user);
+
+// 3
+// let getName = function(hobby1, hobby2) {
+//   console.log(this.name +' from '+ this.place + ' likes ' + hobby1 + ' and ' + hobby2);
+// }
+// let user = {
+// name: 'Sudarsanan',
+// place: 'Thrissur'  
+// };
+// let hobbies = ['Swimming', 'Cricketing'];
+// getName.call(user, hobbies[0], hobbies[1]);
+
+
+// 4
+// let getName = function(company) {
+//   console.log(`${this.name} from ${this.address} works in a ${company.type} company named ${company.cname} in ${company.place}`);
+// }
+// let user = {
+// name: 'Sudarsanan',
+// address: 'Thrissur'  
+// };
+// let company = {
+//   cname : 'Pragmetic techsoft',
+//   place : 'Kochi',
+//   type : 'Software'
+// }
+// getName.call(user, company);
+
+// 5
+// function Avengers(name, charactor) {
+//   this.name = name;
+//   this.charactor = charactor;
+// }
+
+// function MarvelAvengers(name, charactor, specification) {
+//   Avengers.call(this, name, charactor);
+//   Avengers.apply(this, [name, charactor]);
+//   this.specification = specification;
+// }
+
+// var tony = new MarvelAvengers("TONY STARK", "IRON MAN", "Human With ARC Reactor and metal body");
+// console.log(tony.name+' is ' + tony.charactor + ' and ' + tony.specification);
+
+
+//////////////////////////DEFAULT BINDING////////////////////////////
+
+// 1
+// function getSpiderMan(){
+//   console.log("Peter Parker is : ", this.ultraBall);
+// }
+
+// var ultraBall = "Spiderman";
+// getSpiderMan();
+
+// 2
+// function getHUlk(){
+// var hulk = "Hulk";
+
+//   console.log("Bruce Banner is : ", this.hulk);
+// }
+
+// getHUlk();
+
+// 3
+// function getHUlk(){  
+//     console.log("Bruce Banner is : ", this.hulk);
+//   }
+// var hulk = "Hulk";
+// getHUlk();
+
+// 4
+
 
 
 
